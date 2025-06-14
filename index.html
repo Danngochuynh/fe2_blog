@@ -1,0 +1,2142 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Huỳnh Ngọc Dân</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+   .loader-wrapper {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(26, 26, 26, 0.95);
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    .spinner-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate3D(1, 2, 0.5, 90deg); /* Bạn có thể đổi thành .w1, .w2, .w3 tùy style */
+    }
+
+    .three-quarter-spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #fb5b53;
+      border-top: 6px solid transparent;
+      border-radius: 50%;
+      animation: spin .6s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        pointer-events: none;
+        display: none;
+      }
+    }
+        /* Cursor Effect */
+        .cursor-circle {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out;
+        }
+/* HEADER */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #64ffda;
+  border-bottom: 2px solid #64ffda;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #101010;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  color: #64ffda;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+  color: #00e5ff;
+}
+
+        /* Background Stars Canvas */
+        #stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            padding: 50px 20px;
+        }
+
+        .navbar.active {
+            right: 0;
+        }
+
+        .nav-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin: 20px 0;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+
+        .nav-menu i {
+            margin-right: 15px;
+            width: 20px;
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 80px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Home Section */
+        .home-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .home-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #64ffda;
+        }
+
+        .typing-text {
+            border-right: 2px solid #64ffda;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #64ffda; }
+        }
+
+        .home-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease 2s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .home-image {
+            text-align: center;
+            opacity: 0;
+            transform: translateX(100px);
+            animation: slideInRight 1s ease 1s forwards;
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .home-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #64ffda;
+            transition: transform 0.3s ease;
+        }
+
+        .home-image img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-item {
+            margin: 20px 0;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            width: 0;
+            transition: width 2s ease;
+            border-radius: 10px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 50px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #64ffda, #00bcd4);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 50%;
+            text-align: right;
+            padding-right: 50px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 50%;
+            text-align: left;
+            padding-left: 50px;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #64ffda;
+            border-radius: 50%;
+            border: 4px solid #0f0f23;
+        }
+
+        /* Projects */
+        #projects {
+            min-height: 100vh;
+            padding: 80px 20px;
+            position: relative;
+            perspective: 1500px;
+        }
+
+        .projects-title {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #64ffda, #fff, #64ffda);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.5)); }
+            to { filter: drop-shadow(0 0 40px rgba(100, 255, 218, 0.8)); }
+        }
+
+        .tech-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .tech-filter button {
+            background: rgba(100, 255, 218, 0.1);
+            backdrop-filter: blur(15px);
+            color: #64ffda;
+            border: 2px solid rgba(100, 255, 218, 0.3);
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-filter button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .tech-filter button:hover::before {
+            left: 100%;
+        }
+
+        .tech-filter button:hover,
+        .tech-filter button.active {
+            background: rgba(100, 255, 218, 0.9);
+            color: #0f0f23;
+            box-shadow: 0 0 30px rgba(100, 255, 218, 0.6);
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .container-3d {
+            transform-style: preserve-3d;
+            transform: rotateX(10deg) rotateY(5deg);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .entire-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .content-carrousel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            border-radius: 25px;
+            padding: 30px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(255, 255, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card:hover {
+            transform: translateY(-20px) rotateX(5deg) rotateY(5deg) scale(1.02);
+            box-shadow: 
+                0 25px 50px rgba(100, 255, 218, 0.4),
+                0 0 80px rgba(100, 255, 218, 0.3),
+                inset 0 0 30px rgba(100, 255, 218, 0.1);
+            border-color: rgba(100, 255, 218, 0.8);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.5));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(2deg); }
+            50% { transform: translateY(-5px) rotate(0deg); }
+            75% { transform: translateY(-12px) rotate(-2deg); }
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #64ffda;
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+
+        .shadow {
+            position: relative;
+            height: 250px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            overflow: hidden;
+            perspective: 800px;
+        }
+
+        .shadow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: rotateX(2deg) rotateY(2deg);
+            border-radius: 20px;
+            filter: brightness(0.9) contrast(1.1);
+        }
+
+        .project-card:hover .shadow img {
+            transform: rotateX(15deg) rotateY(15deg) scale(1.1);
+            filter: brightness(1.1) contrast(1.2) saturate(1.3);
+        }
+
+        .project-info {
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .project-members {
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-time {
+            background: linear-gradient(45deg, #ffd700, #ffab00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(100, 255, 218, 0.15);
+            color: #64ffda;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            background: rgba(100, 255, 218, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .view-details-btn {
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            border: none;
+            color: #0f0f23;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .view-details-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .view-details-btn:hover::before {
+            left: 100%;
+        }
+
+        .view-details-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(100, 255, 218, 0.4);
+        }
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh; /* khoảng cách giữa các project-card */
+}
+
+      .project-detail {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0 20px;
+    margin-top: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.project-detail.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 20px;
+}
+.toggle-detail-btn {
+    background: linear-gradient(135deg, #64ffda, #00bcd4);
+    color: #0f0f23;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle-detail-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.toggle-detail-btn:hover::before {
+    left: 100%;
+}
+
+.toggle-detail-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
+}
+        .project-detail ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-detail li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .project-detail li:last-child {
+            border-bottom: none;
+        }
+
+        .project-detail li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: #64ffda;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        .project-detail li:hover {
+            color: #64ffda;
+            transform: translateX(10px);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+#slideshows {
+  perspective: 1000px;
+  overflow: hidden;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.entire-contents {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content-carrousels {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 18s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content-carrousels figure {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  margin: -75px 0 0 -100px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-radius: 30%;
+  overflow: hidden;
+}
+
+.content-carrousels figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+        /* Sparkle Effects */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #64ffda;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 1.5s ease-out forwards;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects-title {
+                font-size: 2.5rem;
+            }
+
+            .content-carrousel {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 10px;
+            }
+
+            .container-3d {
+                transform: rotateX(5deg) rotateY(2deg);
+            }
+
+            .tech-filter {
+                gap: 8px;
+            }
+
+            .tech-filter button {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+
+            .shadow {
+                height: 200px;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: loadIn 0.8s ease-out forwards;
+        }
+
+        @keyframes loadIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin: 30px 0;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #64ffda;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            color: #0f0f23;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.4);
+        }
+   /* About Us */
+   .about-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 80px 0;
+  color: #fff;
+}
+
+.typing-bg {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  animation: slideBg 8s linear forwards;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+@keyframes slideBg {
+  0% { left: -100%; }
+  100% { left: 0; }
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.typing-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  min-height: 120px;
+}
+
+.typing-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  list-style: none;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #64ffda;
+  width: fit-content;
+  animation: typingTitle 2.5s steps(20), blink .8s step-end infinite;
+}
+
+@keyframes typingTitle {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #64ffda; }
+}
+        /* Section Titles */
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #64ffda;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            border-radius: 2px;
+        }
+
+        /* Firework Canvas */
+        #fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        /* Click Glow Effect */
+        .click-glow {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(100, 255, 218, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9997;
+            animation: glowExpand 0.6s ease-out forwards;
+        }
+
+        @keyframes glowExpand {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .home-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            section {
+                padding: 50px 20px;
+            }
+            
+            .home-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item .timeline-content {
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+              body.dark-mode {
+    background-color: #111;
+    color: #f1f1f1;
+  }
+        }
+        #scroll-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #btnTop, #btnBottom {
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  #btnTop:hover, #btnBottom:hover {
+    background-color: #555;
+  }
+  /* Ẩn nút lên ban đầu */
+  #btnTop {
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* Khi có class active thì hiện */
+  #btnTop.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor Circle -->
+    <div class="cursor-circle"></div>
+<header id="header">
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="#home" class="nav-link">Trang Chủ</a></li>
+      <li><a href="#about" class="nav-link">Giới Thiệu</a></li>
+      <li><a href="#projects" class="nav-link">Dự Án</a></li>
+      <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
+    </ul>
+  </nav>
+</header>
+    <!-- Background Stars -->
+    <canvas id="stars"></canvas>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworks"></canvas>
+
+    <!-- Navigation -->
+    <button class="nav-toggle" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </button>
+<button id="toggle-theme" style="
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  padding: 8px 12px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+">🌙</button>
+
+    <nav class="navbar" id="navbar">
+      <ul class="nav-menu">
+        <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i>About Me</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i>Skills</a></li>
+        <li><a href="#timeline"><i class="fas fa-clock"></i>Timeline</a></li>
+        <li><a href="#projects"><i class="fas fa-folder"></i>Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+        <li><a href="#certificates"><i
+              class="fas fa-certificate"></i>Certificates</a></li>
+        <li><a href="#education"><i
+              class="fas fa-graduation-cap"></i>Education</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="container">
+        <div class="home-content">
+          <div class="home-text">
+            <h1 class="typing-text" id="typing-name"></h1>
+            <p>Xin chào! Tôi là một lập trình viên Fullstack với niềm đam mê xây
+              dựng các website hiện đại, tương tác cao và tối ưu trải nghiệm
+              người dùng. Với tinh thần học hỏi và sáng tạo không ngừng, tôi
+              luôn nỗ lực để mang lại những sản phẩm chất lượng.</p>
+          </div>
+          <div class="home-image">
+            <img
+              src="3.png"
+              alt="Profile Image" id="profile-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+  <div class="typing-bg"></div>
+
+  <div class="container content-wrapper" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+    <!-- Phần nội dung mô tả -->
+    <div style="flex: 2 1 500px;">
+      <h2 class="section-title" id="typed-title"></h2>
+
+      <div data-aos="fade-up" data-aos-delay="200">
+        <p class="typing-text" data-text="Tôi là sinh viên ngành Công Nghệ Thông Tin tại TDC, có định hướng phát triển trở thành lập trình viên chuyên nghiệp trong lĩnh vực phát triển web và ứng dụng. Tôi yêu thích các công nghệ mới và luôn không ngừng trau dồi kỹ năng lập trình cũng như tư duy giải quyết vấn đề.">
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="400">
+        <h3 style="color: #64ffda; margin-bottom: 20px;">Mục tiêu nghề nghiệp:</h3>
+        <p class="typing-text" data-text="Trở thành một Fullstack Developer có thể thiết kế, xây dựng và triển khai các hệ thống web tối ưu, bảo mật và thân thiện với người dùng. Trong 5 năm tới, tôi mong muốn tham gia vào các dự án lớn và đóng vai trò chủ chốt trong việc phát triển sản phẩm.">
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="600">
+        <h3 style="color: #64ffda; margin-bottom: 20px;">Sở thích:</h3>
+        <ul class="typing-list">
+          <li><span style="color: black;">📚</span> Đọc sách công nghệ</li>
+          <li><span style="color: black;">🎮</span> Chơi game chiến thuật</li>
+          <li><span style="color: black;">🔍</span> Khám phá framework mới</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Thẻ cá nhân -->
+    <div style="flex: 1 1 300px; background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <img src="3.png" alt="3" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin: 10px 0;">Huỳnh Ngọc Dân</h3>
+      <p style="color: gray;">Web Design and Development</p>
+      
+      <div style="margin: 20px 0;">
+        <a href="https://github.com/Danngochuynh" target="_blank" style="margin: 0 10px; color: black;">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/d%C3%A2n-hu%E1%BB%B3nh-ng%E1%BB%8Dc-930255361/" target="_blank" style="margin: 0 10px; color: #0077b5;">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100075453733873&locale=vi_VN" target="_blank" style="margin: 0 10px; color: #3b5998;">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/ngocdan.huynh.718/" target="_blank" style="margin: 0 10px; color: #c13584;">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+      </div>
+
+      <!-- Nút tải CV -->
+      <a href="MyCv.pdf" download style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #64ffda; color: #000; border-radius: 8px; text-decoration: none; font-weight: bold;">
+        <i class="fas fa-download"></i> Tải CV
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3>Frontend</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>HTML/CSS</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>JavaScript</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Vue.js</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <h3>Backend</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>PHP</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Laravel</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>RESTful API</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+            <h3>Database & Tools</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>MySQL</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Git/GitHub</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Figma</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+            <div class="timeline-content">
+              <h3>2022 - 2023</h3>
+              <p>Tham gia khóa học lập trình Web Fullstack tại trường. Thực hiện
+                đồ án môn học xây dựng website thương mại điện tử.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+            <div class="timeline-content">
+              <h3>03/2024 - 05/2024</h3>
+              <h4>Discovery Project</h4>
+              <p>Làm project "Discovery" - website đặt tour du lịch. Role:
+                Fullstack Developer. Công nghệ: Laravel, JS, MySQL.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="600">
+            <div class="timeline-content">
+              <h3>06/2024 - Hiện tại</h3>
+              <p>Đang phát triển CV cá nhân với hiệu ứng tương tác + 3D +
+                animation cao, sử dụng Vue.js, AOS, Blade template.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+  <div class="container-3d">
+    <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+
+    <!-- Filter buttons -->
+    <div class="tech-filter" data-aos="fade-up">
+      <button data-tech="all">Tất cả</button>
+      <button data-tech="laravel">Laravel</button>
+      <button data-tech="vue">Vue.js</button>
+      <button data-tech="csharp">C#</button>
+    </div>
+
+   <div class="projects-grid">
+  <!-- 1. TMĐT -->
+  <div class="project-card" data-tech="laravel vue" data-aos="fade-up" data-aos-delay="100">
+    <h3>🛒 Thương mại điện tử</h3>
+    <p><strong>Thành viên:</strong> 5 người | <strong>Thời gian:</strong> 03/2025 – 06/2025</p>
+    <p><strong>Công nghệ:</strong> Laravel, PHP, JS, Blade</p>
+    <button class="toggle-detail-btn">Xem chi tiết</button>
+    <div class="project-detail">
+      <ul>
+        <li>Trang chủ, danh mục, sản phẩm, giỏ hàng</li>
+        <li>Chat real-time, đánh giá sao</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2. Game phiêu lưu -->
+  <div class="project-card" data-tech="threejs cocos" data-aos="fade-up" data-aos-delay="150">
+    <h3>🎮 Game Phiêu Lưu</h3>
+    <p><strong>Thành viên:</strong> 3 người | <strong>Thời gian:</strong> 03/2025 – 05/2025</p>
+    <p><strong>Công cụ:</strong> Three.js, HTML, CSS, Cocos</p>
+    <button class="toggle-detail-btn">Xem chi tiết</button>
+    <div class="project-detail">
+      <ul>
+        <li>Game phiêu lưu 3D WASD + skill</li>
+        <li>Hiệu ứng ánh sáng + camera</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. Quản lý thuốc -->
+  <div class="project-card" data-tech="c#" data-aos="fade-up" data-aos-delay="200">
+    <h3>💊 Quản lý thuốc</h3>
+    <p><strong>Thành viên:</strong> 2 người | <strong>Thời gian:</strong> 08/2024 – 12/2024</p>
+    <p><strong>Công cụ:</strong> Visual Studio, C#, SQL Server</p>
+    <button class="toggle-detail-btn">Xem chi tiết</button>
+    <div class="project-detail">
+      <ul>
+        <li>Thêm/sửa/xoá thuốc, nhóm thuốc</li>
+        <li>Thống kê tồn kho, doanh thu</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4. Quản lý kho thời trang -->
+  <div class="project-card" data-tech="php" data-aos="fade-up" data-aos-delay="250">
+    <h3>👗 Quản lý kho thời trang</h3>
+    <p><strong>Thành viên:</strong> 3 người | <strong>Thời gian:</strong> 02/2024 – 06/2024</p>
+    <p><strong>Công nghệ:</strong> PHP, HTML, CSS, JS</p>
+    <button class="toggle-detail-btn">Xem chi tiết</button>
+    <div class="project-detail">
+      <ul>
+        <li>Quản lý theo size, màu, loại</li>
+        <li>In phiếu xuất kho, thống kê</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. Quản lý thư viện -->
+  <div class="project-card" data-tech="sql" data-aos="fade-up" data-aos-delay="300">
+    <h3>📚 Quản lý thư viện</h3>
+    <p><strong>Thành viên:</strong> 2 người | <strong>Thời gian:</strong> 03/2024 – 04/2024</p>
+    <p><strong>Công nghệ:</strong> SSMS, SQL, Winform</p>
+    <button class="toggle-detail-btn">Xem chi tiết</button>
+    <div class="project-detail">
+      <ul>
+        <li>Quản lý sách, gia hạn, tìm kiếm</li>
+        <li>Thông báo trễ hạn, số lượng sách</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6. Truyện tranh -->
+  <div class="project-card" data-tech="vue" data-aos="fade-up" data-aos-delay="350">
+    <h3>📖 Website Truyện tranh</h3>
+    <p><strong>Thành viên:</strong> 1 người | <strong>Thời gian:</strong> 04/2025 – Nay</p>
+    <p><strong>Công nghệ:</strong> HTML, CSS, Vue.js</p>
+    <button class="toggle-detail-btn">Xem chi tiết</button>
+    <div class="project-detail">
+      <ul>
+        <li>Đọc truyện dạng cuộn mượt</li>
+        <li>Bookmark, bình luận, dark mode</li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+   <section id="slideshows">
+  <div class="entire-contents">
+    <div class="content-carrousels" id="carousel">
+      <figure class="shadow"><img src="project1.png" alt="1"></figure>
+      <figure class="shadow"><img src="project2.png" alt="2"></figure>
+      <figure class="shadow"><img src="project3.png" alt="3"></figure>
+      <figure class="shadow"><img src="project4.png" alt="4"></figure>
+      <figure class="shadow"><img src="project5.png" alt="5"></figure>
+      <figure class="shadow"><img src="project6.png" alt="6"></figure>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Contact</h2>
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: start;">
+          <div data-aos="fade-right" data-aos-delay="200">
+            <h3 style="color: #64ffda; margin-bottom: 30px;">Thông tin liên
+              hệ</h3>
+            <div style="font-size: 1.2rem; line-height: 2;">
+              <p><i class="fas fa-envelope"></i> huynhngocdan744@gmail.com</p>
+              <p><i class="fas fa-phone"></i> +84 777 541 018</p>
+              <p><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh, Việt
+                Nam</p>
+            </div>
+          </div>
+
+          <form class="contact-form" data-aos="fade-left" data-aos-delay="400">
+            <div class="form-group">
+              <input type="text" placeholder="Họ và tên" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required>
+            </div>
+             <div class="form-group">
+              <input type="text" placeholder="Số Điện Thoại" required>
+            </div>
+            <div class="form-group">
+              <textarea rows="5" placeholder="Nội dung tin nhắn"
+                required></textarea>
+            </div>
+            <button type="submit" class="submit-btn"
+              onclick="createFireworks(event)">
+              Gửi tin nhắn
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Sections -->
+    <section id="certificates">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Certificates</h2>
+        <div data-aos="fade-up" data-aos-delay="200"
+          style="font-size: 1.2rem; line-height: 2;">
+          <ul>
+            <li>🎓 Chứng chỉ lập trình web fullstack – </li>
+            <li>🎓 Chứng chỉ HTML/CSS – FreeCodeCamp</li>
+            <li>🎓 Chứng chỉ Laravel cơ bản – F8</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Education</h2>
+        <div data-aos="fade-up" data-aos-delay="200"
+          style="font-size: 1.2rem; line-height: 2;">
+          <h3 style="color: #64ffda; margin-bottom: 20px;">🎓 TDC – TP.HCM</h3>
+          <p><strong>Ngành học:</strong> Công Nghệ Thông Tin</p>
+          <p><strong>Thời gian:</strong> 2022 – nay</p>
+        </div>
+      </div>
+    </section>
+     <div id="scroll-buttons">
+    <button id="btnTop" onclick="scrollToTop()" aria-label="Lên đầu trang">
+      <i class="fas fa-arrow-up" style="font-size: 20px;"></i>
+    </button>
+
+    <button id="btnBottom" onclick="scrollToBottom()" aria-label="Xuống cuối trang">
+      <i class="fas fa-arrow-down" style="font-size: 20px;"></i>
+    </button>
+  </div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-content">
+    <p>© 2025 Ngọc Dân. All Rights Reserved.</p>
+    <div class="footer-icons">
+      <a href="https://github.com/Danngochuynh" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:danh17032@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/d%C3%A2n-hu%E1%BB%B3nh-ng%E1%BB%8Dc-930255361/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.querySelector(".cursor-circle").classList.add("show");
+    }, 1500); // Delay 3s (để loader chạy trước)
+  });
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Cursor Circle Effect
+        const cursorCircle = document.querySelector('.cursor-circle');
+        let mouseX = 0, mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            cursorCircle.style.left = mouseX - 10 + 'px';
+            cursorCircle.style.top = mouseY - 10 + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+ const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.onscroll = () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 80;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= sectionTop) current = section.getAttribute("id");
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  };
+        // Typing Effect
+        const typingText = document.getElementById('typing-name');
+        const text = 'Huỳnh Ngọc Dân';
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                typingText.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 150);
+            }
+        }
+
+        // Start typing effect after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 500);
+        });
+
+        // Navigation Toggle
+        function toggleNav() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+
+        // Close nav when clicking on link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbar').classList.remove('active');
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Skills Animation
+        const skillsSection = document.getElementById('skills');
+        let skillsAnimated = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !skillsAnimated) {
+                    animateSkills();
+                    skillsAnimated = true;
+                }
+            });
+        });
+
+        observer.observe(skillsSection);
+
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 1300);
+            });
+        }
+
+        // Stars Background Animation
+        const starsCanvas = document.getElementById('stars');
+        const starsCtx = starsCanvas.getContext('2d');
+        let stars = [];
+
+        function resizeStarsCanvas() {
+            starsCanvas.width = window.innerWidth;
+            starsCanvas.height = window.innerHeight;
+        }
+
+       function createStars() {
+    stars = [];
+    for (let i = 0; i < 200; i++) {
+        stars.push({
+            x: Math.random() * starsCanvas.width,
+            y: Math.random() * starsCanvas.height,
+            radius: Math.random() * 2 + 1,
+            alpha: Math.random() * 0.5 + 0.5,
+            speedY: Math.random() * 1 + 0.5, // tốc độ rơi dọc
+        });
+    }
+}
+
+        function animateStars() {
+    starsCtx.clearRect(0, 0, starsCanvas.width, starsCanvas.height);
+    
+    stars.forEach(star => {
+        // Rơi xuống
+        star.y += star.speedY;
+
+        // Khi chạm đáy thì quay lại trên cùng
+        if (star.y > starsCanvas.height) {
+            star.y = -star.radius;
+            star.x = Math.random() * starsCanvas.width;
+        }
+
+        // Vẽ hình tròn
+        starsCtx.beginPath();
+        starsCtx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        starsCtx.fillStyle = `rgba(100, 255, 218, ${star.alpha})`;
+        starsCtx.fill();
+    });
+
+    requestAnimationFrame(animateStars);
+}
+        window.addEventListener('resize', () => {
+            resizeStarsCanvas();
+            createStars();
+        });
+
+        resizeStarsCanvas();
+        createStars();
+        animateStars();
+
+        // Click Glow Effect
+        document.addEventListener('click', (e) => {
+            createClickGlow(e.clientX, e.clientY);
+        });
+
+        function createClickGlow(x, y) {
+            const glow = document.createElement('div');
+            glow.className = 'click-glow';
+            glow.style.left = (x - 50) + 'px';
+            glow.style.top = (y - 50) + 'px';
+            document.body.appendChild(glow);
+            
+            setTimeout(() => {
+                document.body.removeChild(glow);
+            }, 600);
+        }
+
+        // Timeline Item Click Effect
+        document.querySelectorAll('.timeline-content').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.05)';
+                }, 200);
+            });
+        });
+
+        // Project Image Modal
+        function showImageModal(imageName) {
+            alert(`Viewing: ${imageName}\n\nIn a real implementation, this would open a modal with the actual project image.`);
+        }
+
+        // Fireworks Effect
+        const fireworksCanvas = document.getElementById('fireworks');
+        const fireworksCtx = fireworksCanvas.getContext('2d');
+        let fireworks = [];
+        let particles = [];
+
+        function resizeFireworksCanvas() {
+            fireworksCanvas.width = window.innerWidth;
+            fireworksCanvas.height = window.innerHeight;
+        }
+
+        class Firework {
+            constructor(startX, startY, targetX, targetY) {
+                this.x = startX;
+                this.y = startY;
+                this.startX = startX;
+                this.startY = startY;
+                this.targetX = targetX;
+                this.targetY = targetY;
+                this.distanceToTarget = Math.sqrt(Math.pow(targetX - startX, 2) + Math.pow(targetY - startY, 2));
+                this.distanceTraveled = 0;
+                this.coordinates = [];
+                this.coordinateCount = 3;
+                while(this.coordinateCount--) {
+                    this.coordinates.push([this.x, this.y]);
+                }
+                this.angle = Math.atan2(targetY - startY, targetX - startX);
+                this.speed = 2;
+                this.acceleration = 1.05;
+                this.brightness = Math.random() * 50 + 50;
+                this.targetRadius = 1;
+            }
+
+            update(index) {
+                this.coordinates.pop();
+                this.coordinates.unshift([this.x, this.y]);
+                
+                if(this.targetRadius < 8) {
+                    this.targetRadius += 0.3;
+                } else {
+                    this.targetRadius = 1;
+                }
+                
+                this.speed *= this.acceleration;
+                
+                let vx = Math.cos(this.angle) * this.speed;
+                let vy = Math.sin(this.angle) * this.speed;
+                this.distanceTraveled = Math.sqrt(Math.pow(this.x + vx - this.startX, 2) + Math.pow(this.y + vy - this.startY, 2));
+                
+                if(this.distanceTraveled >= this.distanceToTarget) {
+                    createParticles(this.targetX, this.targetY);
+                    fireworks.splice(index, 1);
+                } else {
+                    this.x += vx;
+                    this.y += vy;
+                }
+            }
+
+            draw() {
+                fireworksCtx.beginPath();
+                fireworksCtx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][1]);
+                fireworksCtx.lineTo(this.x, this.y);
+                fireworksCtx.strokeStyle = `hsl(${Math.random() * 360}, 100%, ${this.brightness}%)`;
+                fireworksCtx.stroke();
+                
+                fireworksCtx.beginPath();
+                fireworksCtx.arc(this.targetX, this.targetY, this.targetRadius, 0, Math.PI * 2);
+                fireworksCtx.stroke();
+            }
+        }
+
+        class Particle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.coordinates = [];
+                this.coordinateCount = 5;
+                while(this.coordinateCount--) {
+                    this.coordinates.push([this.x, this.y]);
+                }
+                this.angle = Math.random() * Math.PI * 2;
+                this.speed = Math.random() * 10 + 1;
+                this.friction = 0.95;
+                this.gravity = 1;
+                this.hue = Math.random() * 360;
+                this.brightness = Math.random() * 80 + 50;
+                this.alpha = 1;
+                this.decay = Math.random() * 0.03 + 0.01;
+            }
+
+            update(index) {
+                this.coordinates.pop();
+                this.coordinates.unshift([this.x, this.y]);
+                this.speed *= this.friction;
+                this.x += Math.cos(this.angle) * this.speed;
+                this.y += Math.sin(this.angle) * this.speed + this.gravity;
+                this.alpha -= this.decay;
+                
+                if(this.alpha <= this.decay) {
+                    particles.splice(index, 1);
+                }
+            }
+
+            draw() {
+                fireworksCtx.beginPath();
+                fireworksCtx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][1]);
+                fireworksCtx.lineTo(this.x, this.y);
+                fireworksCtx.strokeStyle = `hsla(${this.hue}, 100%, ${this.brightness}%, ${this.alpha})`;
+                fireworksCtx.stroke();
+            }
+        }
+
+        function createParticles(x, y) {
+            let particleCount = 30;
+            while(particleCount--) {
+                particles.push(new Particle(x, y));
+            }
+        }
+
+        function animateFireworks() {
+            fireworksCtx.globalCompositeOperation = 'destination-out';
+            fireworksCtx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            fireworksCtx.fillRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
+            fireworksCtx.globalCompositeOperation = 'lighter';
+            
+            let i = fireworks.length;
+            while(i--) {
+                fireworks[i].draw();
+                fireworks[i].update(i);
+            }
+            
+            let j = particles.length;
+            while(j--) {
+                particles[j].draw();
+                particles[j].update(j);
+            }
+            
+            requestAnimationFrame(animateFireworks);
+        }
+
+        window.addEventListener('resize', resizeFireworksCanvas);
+        resizeFireworksCanvas();
+        animateFireworks();
+
+        function createFireworks(e) {
+            e.preventDefault();
+            
+            // Create multiple fireworks
+            for(let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    let startX = Math.random() * fireworksCanvas.width;
+                    let startY = fireworksCanvas.height;
+                    let targetX = Math.random() * fireworksCanvas.width;
+                    let targetY = Math.random() * fireworksCanvas.height * 0.5;
+                    
+                    fireworks.push(new Firework(startX, startY, targetX, targetY));
+                }, i * 200);
+            }
+            
+            // Show success message
+            setTimeout(() => {
+                alert('🎉 Tin nhắn đã được gửi thành công! Cảm ơn bạn đã liên hệ.');
+            }, 1000);
+            
+            return false;
+        }
+document.querySelectorAll('.rotate-img').forEach(img => {
+    img.addEventListener('mousemove', (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = e.clientX - rect.left; // vị trí chuột trong ảnh
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = -(y - centerY) / 15; // trục X
+      const rotateY = (x - centerX) / 15;  // trục Y
+
+      img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    img.addEventListener('mouseleave', () => {
+      img.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  });
+  const carousel = document.getElementById('carousel');
+  let isDragging = false;
+  let startX = 0;
+  let currentRotate = 0;
+
+  // Chuột nhấn
+  carousel.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.clientX;
+    carousel.style.animationPlayState = 'paused'; // dừng animation
+  });
+
+  // Chuột kéo
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    const deltaX = e.clientX - startX;
+    currentRotate += deltaX * 0.3;
+    carousel.style.transform = `rotateY(${currentRotate}deg)`;
+    startX = e.clientX;
+  });
+
+  // Chuột nhả
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    carousel.style.animationPlayState = 'running'; // tiếp tục animation
+  });
+
+  // Xếp các figure thành vòng tròn
+  const figures = carousel.querySelectorAll('figure');
+  const num = figures.length;
+  const angle = 360 / num;
+  figures.forEach((fig, i) => {
+    fig.style.transform = `rotateY(${i * angle}deg) translateZ(400px)`;
+  });
+        // Profile image hover effect
+        const profileImg = document.getElementById('profile-img');
+        profileImg.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1) rotate(5deg)';
+        });
+
+        profileImg.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+
+        // Add sparkle effect to section titles
+        document.querySelectorAll('.section-title').forEach(title => {
+            title.addEventListener('mouseenter', function() {
+                this.style.textShadow = '0 0 20px #64ffda, 0 0 40px #64ffda, 0 0 60px #64ffda';
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            title.addEventListener('mouseleave', function() {
+                this.style.textShadow = 'none';
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add pulse effect to buttons
+        document.querySelectorAll('.submit-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 0.5s infinite';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.animation = 'none';
+            });
+        });
+
+        // Add pulse keyframe
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1) translateY(-3px); }
+                50% { transform: scale(1.05) translateY(-5px); }
+                100% { transform: scale(1) translateY(-3px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 1s ease-in-out';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Parallax effect for sections
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach((section, index) => {
+                const rate = scrolled * -0.5;
+                section.style.transform = `translateY(${rate * 0.1}px)`;
+            });
+        });
+         document.querySelectorAll('.toggle-detail-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const detail = this.nextElementSibling;
+      detail.classList.toggle('active');
+      this.textContent = detail.classList.contains('active') ? 'Ẩn chi tiết' : 'Xem chi tiết';
+    });
+  });
+ document.addEventListener("DOMContentLoaded", () => {
+  // Set title typing
+  document.getElementById("typed-title").textContent = "About Me";
+
+  const typeText = (element, text, delay = 20) => {
+    let index = 0;
+    const interval = setInterval(() => {
+      element.textContent += text[index];
+      index++;
+      if (index >= text.length) clearInterval(interval);
+    }, delay);
+  };
+
+  const paragraphs = document.querySelectorAll(".typing-text");
+  paragraphs.forEach((p, i) => {
+    const text = p.dataset.text;
+    p.textContent = "";
+    setTimeout(() => typeText(p, text), 2000 + i * 2000);
+  });
+});
+ const toggleButton = document.getElementById('toggle-theme');
+  const currentTheme = localStorage.getItem('theme');
+
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleButton.textContent = '☀️';
+  }
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    toggleButton.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+ const btnTop = document.getElementById('btnTop');
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 200) { // Scroll xuống hơn 200px thì hiện nút lên
+      btnTop.classList.add('active');
+    } else {
+      btnTop.classList.remove('active');
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+    </script>
+  </body>
+</html>
